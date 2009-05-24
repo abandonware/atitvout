@@ -1,0 +1,112 @@
+atitvout (0.4-13) unstable; urgency=low
+
+  * Merged atitvout_0.4-12ubuntu1.patch (Closes: #518725 #490746)
+  * Added builddep: quilt, libx86-dev
+  * Updated maintainer email
+  * Bump Standards-Version up to 3.8.1	
+
+ -- Philippe Coval <rzr@gna.org>  Sun, 24 May 2009 22:15:54 +0200
+	
+atitvout (0.4-12ubuntu1) intrepid; urgency=low
+
+  * lrmi-0.6/lrmi.c:
+    - Adjust some constants to match 2.6.26 and newer kernels.
+
+ -- Luca Falavigna <dktrkranz@ubuntu.com>  Sat, 18 Oct 2008 13:11:28 +0200
+
+atitvout (0.4-12) unstable; urgency=low
+
+  * Adopted the package (Closes: #469080)
+  * Updated description
+  * Bump Standards-Version up to 3.8.0
+
+ -- Philippe Coval <rzr@users.sf.net>  Sat, 28 Jun 2008 11:05:08 +0200
+
+atitvout (0.4-11) unstable; urgency=low
+
+  * Bump debhelper compatibility to 6
+  * Remove /usr/bin from debian/dirs
+  * Bump Standards-Version up to 3.7.3 (no other changes)
+
+ -- Francois Marier <francois@debian.org>  Mon, 04 Feb 2008 16:12:06 +1300
+
+atitvout (0.4-10) unstable; urgency=low
+
+  * Add the homepage field in debian/control
+  * Rename the XS-Vcs-* fields to Vcs-*
+
+ -- Francois Marier <francois@debian.org>  Tue, 20 Nov 2007 15:15:31 +1300
+
+atitvout (0.4-9) unstable; urgency=low
+
+  * Refer specifically to GPL-2 in debian/copyright
+  * debian/control: list svn repo (collab-maint)
+
+ -- Francois Marier <francois@debian.org>  Mon, 20 Aug 2007 14:33:31 +1200
+
+atitvout (0.4-8) unstable; urgency=low
+
+  * Remove the strip call from the main Makefile (closes: #436486)
+  * Move the debhelper compat setting to debian/compat
+  * Remove unnecessary commented-out lines in debian/rules
+  * Fix "make clean" lintian warning
+
+ -- Francois Marier <francois@debian.org>  Wed, 08 Aug 2007 06:06:35 +0000
+
+atitvout (0.4-7) unstable; urgency=low
+
+  * Actually add the watch file...
+
+ -- Francois Marier <francois@debian.org>  Tue, 11 Jul 2006 12:05:09 -0400
+
+atitvout (0.4-6) unstable; urgency=low
+
+  * Bump Standards-Version up to 3.7.2 (no changes)
+  * Add watch file
+
+ -- Francois Marier <francois@debian.org>  Mon, 10 Jul 2006 23:28:20 -0400
+
+atitvout (0.4-5) unstable; urgency=low
+
+  * Adopting this package (closes: #364342)
+  * Update FSF address
+  * Update upstream website
+
+ -- Francois Marier <francois@debian.org>  Tue, 25 Apr 2006 17:27:09 -0400
+
+atitvout (0.4-4) unstable; urgency=low
+
+  * Orphaning this package.
+  * Updating standards version to 3.6.2.
+  * Updating to debhelper 4 compatibility.
+
+ -- Ola Lundqvist <opal@debian.org>  Sat, 22 Apr 2006 23:05:26 +0200
+
+atitvout (0.4-3) unstable; urgency=low
+
+  * Fixed test.sh so it have correct atitvout location, closes: #189486.
+  * Updated standards version to 3.6.1.
+
+ -- Ola Lundqvist <opal@debian.org>  Tue, 21 Sep 2004 09:28:00 +0200
+
+atitvout (0.4-2) unstable; urgency=low
+
+  * Added some more documentation to the package, closes: #176440.
+  * Changed the standards version from 2.5.2 to 3.5.8 (no other
+    changes).
+
+ -- Ola Lundqvist <opal@debian.org>  Mon, 13 Jan 2003 19:36:58 +0100
+
+atitvout (0.4-1) unstable; urgency=low
+
+  * New upstream version.
+  * The code is (according to upstream homepage) x86 specific so
+    it should only be built on that arch, closes: #162930.
+
+ -- Ola Lundqvist <opal@debian.org>  Tue,  1 Oct 2002 07:49:27 +0200
+
+atitvout (0.2b-1) unstable; urgency=low
+
+  * Initial release, closes: #162764.
+
+ -- Ola Lundqvist <opal@debian.org>  Mon,  9 Sep 2002 19:38:26 +0200

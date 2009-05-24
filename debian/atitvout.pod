@@ -1,0 +1,54 @@
+=head1 NAME
+
+atitvout - ATI Rage/Radeon TV Out configuration program
+
+=head1 COMMANDS
+
+    help: Shows this help.
+    vbe: Show some information about the VESA BIOS Extension (VBE).
+    tvout: Shows some information about the TV Out connector.
+    standard: Shows some information about the used TV standard.
+    pal*: Sets PAL mode.
+    ntsc*: Sets NTSC mode.
+    detect: Shows a list of attached displays.
+    active: Shows a list of all active displays.
+    auto: Activates all attached displays, deactivates all others.
+    off: Deactives all displays.
+    l,c,t,lc,lt,ct,lct: Activates the specified display, deactivates all
+                        others. (l = LCD; c = CRT; t = TV)
+
+=head1 MISC
+
+Use the flags -f and -r for forcing Rage Mobility/Rage LT resp. Radeon/R128 mode.
+* Not available on Radeon/Rage 128.
+
+You may specifiy more than one command on the command line. An example:
+
+    atitvout pal auto
+
+This command line automatically enables an attached TV and sets it to PAL mode.
+
+=head1 NOTES
+
+PLEASE NOTE: When using the ati driver of XFree 4.1 you should rerun this
+utility always after having changed the screen resolution with C-A-+ or C-A--.
+Otherwise the displays may go nuts.
+
+PLEASE NOTE: Not all ATI adapters support all of these commands. Please try them
+all before complaining.
+
+PLEASE NOTE: Most cards do not allow to activate non attached displays. All calls
+to atitvout will fail if you try to enable displays which do not show up in
+'atitvout detect'.
+
+PLEASE NOTE: Not all adapters seem to support simultaneously using TV and LCD from
+within Linux. Thus 'lt' may fail, while 'l' and 't' succeed. In this case 'auto'
+will fail too. In fact 'auto' works only on very few adapters.
+
+=head1 AUTHOR
+
+Author of this manpage is Ola Lundqvist <opal@debian.org>
+
+=head1 SEE ALSO
+
+http://www.stud.uni-hamburg.de/users/lennart/projects/atitvout/

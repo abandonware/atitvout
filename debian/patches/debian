@@ -1,0 +1,62 @@
+--- atitvout-0.4.orig/Makefile
++++ atitvout-0.4/Makefile
+@@ -4,6 +4,7 @@
+ TAR=atitvout-$(VERSION).tar.gz
+ BINARY=atitvout
+ PACKAGE=atitvout
++PREFIX=/usr/local
+ 
+ all: $(BINARY)
+ 
+@@ -11,17 +12,12 @@
+ 	make -C lrmi-0.6
+ 	$(CC) $(OBJS) lrmi-0.6/liblrmi.a -o $(BINARY)
+ 
+-strip: $(BINARY)
+-	@du -h $(BINARY)
+-	strip -s $(BINARY)
+-	@du -h $(BINARY)
+-
+ clean:
+ 	rm -f *.o $(BINARY) *~ README index.html *.tar.gz test.out
+ 	make -C lrmi-0.6 clean
+ 
+-install: strip
+-	install -g root -o root -m 555 $(BINARY) /usr/local/sbin
++install: $(BINARY)
++	install -g root -o root -m 555 $(BINARY) $(DESTDIR)$(PREFIX)/sbin
+ 
+ deinstall:
+ 	rm -f /usr/local/sbin/$(BINARY)
+--- atitvout-0.4.orig/test.sh
++++ atitvout-0.4/test.sh
+@@ -2,7 +2,7 @@
+ 
+ testit () {
+ 	echo "TEST: Running 'atitvout $FLAG $1' ..."
+-	./atitvout $FLAG $1
++	atitvout $FLAG $1
+ 	echo "TEST: ... finished. Return value is $?. Please wait 3 seconds."
+ 	echo
+ 	sleep 3
+--- atitvout-0.4.orig/COPYING
++++ atitvout-0.4/COPYING
+@@ -2,7 +2,7 @@
+ 		       Version 2, June 1991
+ 
+  Copyright (C) 1989, 1991 Free Software Foundation, Inc.
+-     59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
++     51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
+  Everyone is permitted to copy and distribute verbatim copies
+  of this license document, but changing it is not allowed.
+ 
+@@ -305,7 +305,8 @@
+ 
+     You should have received a copy of the GNU General Public License
+     along with this program; if not, write to the Free Software
+-    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
++    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, 
++    MA  02110-1301, USA
+ 
+ 
+ Also add information on how to contact you by electronic and paper mail.

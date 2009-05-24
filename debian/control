@@ -1,0 +1,20 @@
+Source: atitvout
+Section: misc
+Priority: optional
+Maintainer: Philippe Coval <rzr@gna.org>
+Build-Depends: debhelper (>= 6), quilt, libx86-dev
+Standards-Version: 3.8.1
+Homepage: http://0pointer.de/lennart/projects/atitvout/
+Vcs-Svn: svn://svn.debian.org/svn/collab-maint/deb-maint/atitvout/
+Vcs-Browser: http://svn.debian.org/wsvn/collab-maint/deb-maint/atitvout/
+
+Package: atitvout
+Architecture: i386 ia64
+Depends: ${shlibs:Depends}
+Description: ATI TV Out Support Program
+ This utility program may be used for executing several configuration
+ commands for the TV Out connector of ATI Rage Mobility P/M 
+ and some Radeon graphics boards under GNU/Linux on i386.
+ Primarily it is intended to enable TV Out support after bootup and 
+ for switching the used TV standard from NTSC to PAL. 
+ It works either on console or X.
