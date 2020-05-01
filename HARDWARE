@@ -1,0 +1,28 @@
+Features:
+ 
+  Rage Mobility/Rage LT: 
+
+	All functions. Some cards seem not to be able to use TV and LCD
+    simultaneously. Some cards do not support TV standard switching.
+
+  Rage 128/Radeon
+
+    TV standard switching is supported. BIOS enables TVout
+    automatically when it's connected before PC boot. Other
+    things depend on BIOS implementation.
+    NOTE: All changes will be activated only at the next
+    set_mode call. Thus if you disable CRT output then you 
+    will be able to enable it again only through TV screen
+    (as usual after next set_mode call).
+
+Compatible Hardware:
+
+  All commands:
+    ATI Technologies Inc Rage Mobility P/M AGP 2x
+	ATI Technologies Inc 3D Rage LT Pro AGP-133
+   
+  detect & active:
+    ATI Rage Mobility M3
+
+  Fail:
+    ATI Technologies Inc Rage Mobility M4 AGP

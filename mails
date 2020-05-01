@@ -1,0 +1,155 @@
+From tool@ircninja.com Thu Jan 31 01:57:22 2002
+Return-path: <tool@ircninja.com>
+Envelope-to: lennart@campari.bogus
+Delivery-date: Thu, 31 Jan 2002 01:57:22 +0100
+Received: from campari.bogus
+	([192.168.100.1] helo=localhost ident=user74902)
+	by campari.bogus with esmtp (Exim 3.33 #1 (Debian))
+	id 16W5XV-0004cU-00
+	for <lennart@campari.bogus>; Thu, 31 Jan 2002 01:57:22 +0100
+X-Envelope-From: <tool@ircninja.com>
+X-Envelope-To: <lennart@poettering.de>
+X-Delivery-Time: 1012438222
+Received: from post.strato.de
+	by localhost with POP3 (fetchmail-5.9.6)
+	for lennart@campari.bogus (single-drop); Thu, 31 Jan 2002 01:57:21 +0100 (CET)
+Received: from phucknut.com (ool-18bee2fd.dyn.optonline.net [24.190.226.253])
+	by post.webmailer.de (8.9.3/8.8.7) with SMTP id BAA08173
+	for <lennart@poettering.de>; Thu, 31 Jan 2002 01:50:22 +0100 (MET)
+Received: (qmail 16176 invoked from network); 31 Jan 2002 00:50:34 -0000
+Received: from unknown (HELO blah) (tool@192.168.0.1)
+  by 192.168.0.1 with SMTP; 31 Jan 2002 00:50:34 -0000
+Date: Wed, 30 Jan 2002 19:50:34 -0500 (EST)
+From: <tool@ircninja.com>
+X-Sender: tool@blah
+To: Lennart Poettering <lennart@poettering.de>
+Old-Subject: Re: atitvout + Rage Mobility M3
+In-Reply-To: <20020130225702.GE2234@whiskey.bogus>
+Message-ID: <Pine.LNX.4.21.0201301944390.16173-100000@blah>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Subject: Re: atitvout + Rage Mobility M3
+Status: RO
+X-Status: A
+Content-Length: 1532
+Lines: 44
+
+
+Actually, I've figured it out since then. :)  The tvout only works at
+lower resolutions, so if I switch to 800x600 first it works
+perfect.  You might want to make a note of this on the web site for
+other m3 owners.  The only thing not working now is simultaneous output on
+the lcd and tvout, but I can live without that. 
+
+Thanks for writing this util, it's the only thing that was unsupported on
+this laptop in linux. :)
+
+-Kevin
+
+On Wed, 30 Jan 2002, Lennart Poettering wrote:
+
+> On Fri, 25.01.02 21:08, tool@ircninja.com (tool@ircninja.com) wrote:
+> 
+> > 
+> > Hi,
+> > 
+> > I've been playing around with atitvout, trying to get it working with my
+> > laptop (thinkpad a22p).  The detect and active commands work with -f, but
+> > not much else seems to work.
+> > 
+> > I'm a decent C coder, so if there's anything I can do to help, let me
+> > know.  I'd REALLY like to get this working. :)   I also have access to
+> > some other laptops with ati chipsets, I'll let you know how it works out
+> > once I try it on them.
+> 
+> The M3 seems to have problems with atitvout. Have you tried to run the
+> test script? any success with that?
+> 
+> I do not see any way how you could help atitvout's development as
+> there is no documentation from ati available. all you might try is to
+> reverse engineer the windows driver. good luck!
+> 
+> lp
+> 
+> 
+> -- 
+> name { Lennart Poettering } mail { lennart@poettering.de }
+> icq { 11060553 } www { http://www.poettering.de/lennart/ }
+> loc { hamburg, germany } pgp { 0x1A015CC4 } hack { .phi. }
+> 
+
+
+From henri.valta@kemi.fi Sat Mar 23 16:14:03 2002
+Return-path: <henri.valta@kemi.fi>
+Envelope-to: lennart@campari.bogus
+Delivery-date: Sat, 23 Mar 2002 16:14:03 +0100
+Received: from campari.bogus
+	([192.168.100.1] helo=localhost ident=user63562)
+	by campari.bogus with esmtp (Exim 3.34 #1 (Debian))
+	id 16onDX-0000lN-00
+	for <lennart@campari.bogus>; Sat, 23 Mar 2002 16:14:03 +0100
+X-Envelope-From: <henri.valta@kemi.fi>
+X-Envelope-To: <ati@poettering.de>
+X-Delivery-Time: 1016894847
+Received: from post.strato.de
+	by localhost with POP3 (fetchmail-5.9.8)
+	for lennart@campari.bogus (single-drop); Sat, 23 Mar 2002 16:14:03 +0100 (CET)
+Received: from fep08.tmt.tele.fi (hank-fep8-0.inet.fi [194.251.242.203])
+	by post.webmailer.de (8.9.3/8.8.7) with ESMTP id PAA24683
+	for <ati@poettering.de>; Sat, 23 Mar 2002 15:47:26 +0100 (MET)
+Received: from cromos.linux-dude.com ([62.71.155.253]) by fep08.tmt.tele.fi
+          (InterMail vM.5.01.03.13 201-253-122-118-113-20010918) with ESMTP
+          id <20020323144726.QZFA7072.fep08.tmt.tele.fi@cromos.linux-dude.com>
+          for <ati@poettering.de>; Sat, 23 Mar 2002 16:47:26 +0200
+Content-Type: text/plain;
+  charset="us-ascii"
+From: Henri Valta <henri.valta@kemi.fi>
+To: ati@poettering.de
+Subject: Atitvout 0.2 with radeon works
+Date: Sat, 23 Mar 2002 09:47:25 -0500
+X-Mailer: KMail [version 1.4]
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Message-Id: <200203230947.25330.henri.valta@kemi.fi>
+Status: RO
+X-Status: A
+Content-Length: 893
+Lines: 36
+
+Hi,
+Atitvout works for me:) Thanks for this utility!
+Card: Radeon 64 ddr vivo
+
+Here's the output of some commands, in case you're interested:
+
+# atitvout vbe
+VBE Version: 2.0
+VBE OEM Identification: ATI RAGE128
+
+# atitvout tvout
+TV Out is enabled.
+Reference frequency is 27.00000 Hz
+***well, it says the same whether tv out is really enabled or not
+
+# atitvout standard
+VBE call failed.
+Maybe this command is not supported by your graphics adapter?
+Did your parameters (if you specified some) really make sense?
+Please try all other available commands before complaining!
+
+# atitvout detect ***when tv is connected
+TV is attached via Composite.
+
+# atitvout detect ***when tv is not connected
+No TV is attached.
+
+# atitvout active
+TV is active.
+***this always says tv is active
+
+commands t, ct and auto always enable both crt (50Hz) and tv out
+atitvout c restores the normal crt mode
+
+ -Henri
+
+

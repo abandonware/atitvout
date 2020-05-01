@@ -1,0 +1,154 @@
+atitvout VERSION - Linux ATI TV Out Support Program
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Copyright 2002
+Lennart Poettering <mz617469@poettering.de>
+
+---------------------------------------------------------------------
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or (at
+your option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+---------------------------------------------------------------------
+
+This utility program may be used for executing several configuration
+commands for the TV Out connector of ATI Rage Mobility P/M graphics
+boards under GNU/Linux on x86. It is intended primarily to enable TV
+Out support after bootup and for switching the used TV standard from
+NTSC to PAL.
+
+The utility makes use of x86-VESA-BIOS-calls and thus is not portable
+to other architectures like PPC: *No TV-Out on Macs with this tool*.
+
+Please Notice
+-------------
+
+*Notice*: I do not answer any questions related to Microsoft Windows and ATI's own drivers on that OS.
+
+*Notice*: I don't know where to get the newest ATI drivers for Windows 95, 98, ME, 2000, XP.
+
+*Notice*: I silently ignore HTML mail.
+
+*Notice*: I do not answer any questions related to XFree86 configuration files.
+
+*Notice*: No, I have no "working modeline" for you.
+
+*Notice*: No, there is no chance to get this tool to work on PPC. It's x86-only.
+
+Usage
+-----
+
+For usage info try "atitvout help". I normally run the utility with
+"atitvout pal auto". This switches to PAL for german TVs and enables
+the TV out, when available.
+
+Supported Devices
+-----------------
+
+I developed this tool on an ATI Rage Mobility P/M, but I added support
+for other devices like the Radeon, the Rage 128, Mobility M3, Mobility
+M4.
+
+BUT DON'T FORGET: THE RAGE MOBILITY P/M IS THE ONLY ADAPTER ON WHICH
+THE UTILITY IS KNOWN TO WORK. ON ALL OTHER ADAPTERS YOUR MILEAGE MAY
+VARY.
+
+Rage Mobility P/M and Mobility M3/M4 differ.
+
+The PCI info of my Rage Mobility follows:
+
+<pre>
+[lennart@whiskey] ~$ /sbin/lspci -vs 1:0.0
+
+	VGA compatible controller: ATI Technologies Inc Rage Mobility P/M AGP 2x (rev 64) (prog-if 00 [VGA])
+	Subsystem: FIRST INTERNATIONAL Computer Inc: Unknown device 1730
+	Flags: bus master, stepping, medium devsel, latency 66, IRQ 5
+	Memory at fd000000 (32-bit, non-prefetchable) [size=16M]
+	I/O ports at 2000 [size=256]
+	Memory at fc100000 (32-bit, non-prefetchable) [size=4K]
+	Expansion ROM at <unassigned> [disabled] [size=128K]
+	Capabilities: <available only to root>
+
+[lennart@whiskey] ~$ 
+</pre>
+
+The program should work at least on those graphics cards which share
+the same PCI info with mine. My card is built into a laptop from
+Aldi/Medion. (http://www.stud.uni-hamburg.de/users/lennart/aldi/)
+
+Notes
+-----
+
+When using the ati driver of XFree 4.1 you should rerun this utility
+always after having changed the screen resolution with C-A-+ or
+C-A--. Otherwise the displays may go nuts.
+
+As ATI denied to supply me with documentation about the TV Out
+interface of their cards and I do not have a ATI Radeon or Rage 128 I
+cannot fix my utility so that it works correctly on all these
+devices. Thus the support for these devices is rather limited and may
+be broken. Please try to run 'test.sh' and have an eye an all your
+attached displays, if you experience failures. For better support on
+non-Mobility-P/M-devices you need to fix the utility yourself.
+
+Not all ATI adapters support all of these commands. Please try them
+all before complaining.
+
+Most cards do not allow to activate non attached displays. All calls
+to atitvout will fail if you try to enable displays which do not show
+up in 'atitvout detect'.
+
+Not all adapters seem to support simultaneously using TV and LCD/CRT
+from within Linux. Thus 'lt' (resp. 'ct') may fail, while 'l' (resp. 'c')
+and 't' succeed. In this case 'auto' will fail too. In fact 'auto'
+works only on very few adapters.
+
+Development
+-----------
+
+Development was done under Debian GNU Linux Sid for i386 from January
+2002. The used machine was a Medion 9580-F laptop with an ATI Rage
+Mobility P/M graphics board.
+
+Installation
+------------
+
+Run "make" for compiling the program. You might want to install it
+permanently on your system by issuing "make install" as root. This
+installs the atitvout executable to /usr/local/sbin/. For removing this
+installation you might want to try "make deinstall" as root.
+
+Internet
+--------
+
+You may find up to date releases of this utility on
+	http://www.stud.uni-hamburg.de/users/lennart/projects/atitvout/
+
+You may download this release from
+	http://www.stud.uni-hamburg.de/users/lennart/projects/atitvout/atitvout-VERSION.tar.gz
+
+Thanks go to
+------------
+
+Leif Delgass for supplying me with information about ATI VBE calls
+
+Nick Kurshev for a Radeon/R128 related patch
+
+Stefan Raspl for a ATI Mobility Radeon related patch
+
+Josh Vanderhoof for developing LRMI
+
+---------------------------------------------------------------------
+
+Lennart Poettering <mz617469@poettering.de>, 2002
